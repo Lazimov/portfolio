@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio - Étudiant</title>
+  <meta name="description" content="Portfolio étudiant hébergé sur Amazon S3" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="container header">
+    <div class="brand">
+      <div class="avatar" aria-hidden="true">YL</div>
+      <div>
+        <h1 id="name">Yannis LEVY</h1>
+        <p id="role" class="muted">Étudiant Bac+2 Informatique • Cloud & Systèmes</p>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a href="#projets">Projets</a>
+      <a href="#competences">Compétences</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <h2 id="headline">Je construis des solutions Cloud simples, fiables et sécurisées.</h2>
+        <p id="bio" class="lead">
+          Je m'intéresse au cloud, aux systèmes, à la virtualisation et à l'automatisation. Je recherche une expérience pour mettre en pratique EC2, S3, Proxmox, IAM et le monitoring.
+        </p>
+
+        <div class="cta">
+          <a id="btnCV" class="btn" href="#" rel="noopener">Voir mon CV</a>
+          <a class="btn btn-outline" href="#contact">Me contacter</a>
+        </div>
+
+        <div class="chips" id="chips"></div>
+      </div>
+
+      <div class="card">
+        <h3>Infos rapides</h3>
+        <ul class="list">
+          <li><span class="k">Localisation</span><span id="location">Nice, France</span></li>
+          <li><span class="k">Disponibilité</span><span id="availability">Alternance</span></li>
+          <li><span class="k">Email</span><span id="email">y.levy@ecole-ipssi.net</span></li>
+        </ul>
+        <div class="links" id="links"></div>
+      </div>
+    </section>
+
+    <!-- Section CV intégrée, cachée par défaut, affichée quand on clique sur "Voir mon CV" -->
+    <section id="cvSection" class="section" style="display:none">
+      <div class="section-title">
+        <h2>Mon CV</h2>
+        <p class="muted">Consultez mon CV directement sur la page.</p>
+      </div>
+
+      <div class="card">
+        <iframe
+          id="cvFrame"
+          title="CV de Yannis LEVY"
+          class="cv-frame">
+        </iframe>
+      </div>
+    </section>
+
+    <section id="projets" class="section">
+      <div class="section-title">
+        <h2>Projets</h2>
+        <p class="muted">Sélection de travaux (scolaires, personnels, labo).</p>
+      </div>
+
+      <div class="grid" id="projects"></div>
+    </section>
+
+    <!-- Nouvelle section Formation -->
+    <section id="formation" class="section">
+      <div class="section-title">
+        <h2>Formation</h2>
+        <p class="muted">Parcours académique.</p>
+      </div>
+
+      <div class="grid" id="education"></div>
+    </section>
+
+    <!-- Nouvelle section Expériences -->
+    <section id="experiences" class="section">
+      <div class="section-title">
+        <h2>Expériences</h2>
+        <p class="muted">Stages et projets significatifs.</p>
+      </div>
+
+      <div class="grid" id="experiencesList"></div>
+    </section>
+
+    <section id="competences" class="section">
+      <div class="section-title">
+        <h2>Compétences</h2>
+      </div>
+
+      <div class="skills" id="skills"></div>
+      <div class="skills-levels" id="skillsLevels"></div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="section-title">
+        <h2>Contact</h2>
+        <p class="muted"></p>
+      </div>
+
+      <div class="card">
+        <p>
+          Adresse mail :
+          <a id="mailLink" href="mailto:y.levy@ecole-ipssi.net">
+            y.levy@ecole-ipssi.net
+          </a>
+        </p>
+        <p class="muted small">
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <p class="muted small">
+      © <span id="year"></span> <span id="footerName">Yannis LEVY</span> — Hébergé sur Amazon S3
+    </p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
